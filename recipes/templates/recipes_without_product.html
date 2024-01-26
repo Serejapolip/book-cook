@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipes Without Product</title>
+</head>
+<body>
+    <table>
+        Продукт "{{ product.name }}" отсутствует, или присутствует в количестве меньше 10 грамм в следующих рецептах:
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+        {% for recipe in recipes %}
+        <tr>
+            <td>{{ recipe.id }}</td>
+            <td>{{ recipe.name }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
